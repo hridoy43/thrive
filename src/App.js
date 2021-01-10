@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { Home, Login, Profile, Repo } from 'components/pages';
+import { signIn, signOut } from 'store/actions';
+
+import 'styles/global.css';
+import 'styles/var.css';
+
+// components
+
+// const Authonticator = (setUser, dispatch) => {
+//     fireb.auth().onAuthStateChanged((user) => {
+//         if (user) {
+//             // setUser(user);
+//             dispatch(signIn());
+//             console.log('Log: Authonticator -> user', user);
+//         } else {
+//             // setUser(null);
+//             dispatch(signOut());
+//         }
+//     });
+// };
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const [user, setUser] = useState(null);
+    const isLogged = useSelector((state) => state.isLogged);
+    // const dispatch = useDispatch();
+
+    // useEffect(() => {
+    //     Authonticator(setUser, dispatch);
+    // }, []);
+
+    return (
+        <BrowserRouter>
+            {isLogged ? (
+                <Login />
+            ) : (
+                <Switch>
+                    {/* <Route path='/login' component={Login} /> */}
+                    <Route path="/" exact component={Home} />
+                    <Route path="/profile" component={Profile} />
+                    <Route path="/repo" component={Repo} />
+                </Switch>
+            )}
+        </BrowserRouter>
+    );
 }
 
 export default App;
