@@ -1,5 +1,5 @@
 import PageContainer from 'components/layout/pageContainer';
-import { Input } from 'components/custom';
+import { Input, Button } from 'components/custom';
 import loginPageLogo from 'assets/loginPageLogo.svg';
 import book from 'assets/book.svg';
 import styles from './login.module.css';
@@ -15,8 +15,6 @@ export const Login = () => (
             <Input label="ID" placeholder="Enter your ID...." type="text" />
             <Input label="PIN" placeholder="Enter your PIN...." type="password" />
         </div>
-        <button type="button" className={styles.loginBtn}>
-            Log In
-        </button>
+        <Button label="Log In" className={styles.loginBtn} />
     </div>
 );

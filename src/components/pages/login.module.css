@@ -1,5 +1,5 @@
 .loginContainer {
-  min-height: 100vh;
+  height: 100%;
   background-color: #faf6ff;
   padding: 15px;
   display: flex;
@@ -41,21 +41,10 @@
 }
 
 .loginBtn {
-  margin: 10px 0;
   height: 46px;
   width: 100%;
   max-width: 279px;
-  color: #fff;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 27px;
-  letter-spacing: 0em;
-  text-align: center;
-  border-radius: 999px;
   background: #6000ff;
-  border-radius: 999px;
-  border: none;
   border-top: 5px solid #3c009e;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }

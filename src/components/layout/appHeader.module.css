@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .appHeader {
   width: 100vw;
   background-color: var(--themeColor);
