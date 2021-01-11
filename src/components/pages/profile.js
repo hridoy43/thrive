@@ -1,7 +1,7 @@
 import PageContainer from 'components/layout/pageContainer';
 
 export const Profile = () => (
-    <PageContainer>
+    <PageContainer header>
         <p>Hello!</p>
     </PageContainer>
 );
