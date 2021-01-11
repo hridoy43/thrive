@@ -37,7 +37,7 @@ function App() {
                 <Login />
             ) : (
                 <Switch>
-                    {/* <Route path='/login' component={Login} /> */}
+                    <Route path="/login" component={Login} />
                     <Route path="/" exact component={Home} />
                     <Route path="/profile" component={Profile} />
                     <Route path="/repo" component={Repo} />
