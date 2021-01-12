@@ -4,6 +4,7 @@
   height: 34px;
   background: url(/src/assets/listHeaderBg.svg) no-repeat center center;
   background-size: cover;
+  z-index: -1;
 }
 
 .ListHeaderLabel {

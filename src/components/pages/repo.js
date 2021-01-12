@@ -11,8 +11,10 @@ export const Repo = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchRepo());
-    }, []);
+        if (!repo?.data) {
+            dispatch(fetchRepo());
+        }
+    }, [repo?.data]);
 
     const renderRepoList = (repoList) => {
         if (Array.isArray(repoList) && repoList?.length)
