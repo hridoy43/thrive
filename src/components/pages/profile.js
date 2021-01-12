@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { fetchUser, signOut } from 'redux/actions';
 import { PageContainer, ContentContainer } from 'components/layout';
 import { Button, LoadingPage } from 'components/custom';
+import { MdEdit } from 'react-icons/md';
 import styles from './profile.module.css';
 
 export const Profile = () => {
@@ -37,7 +38,7 @@ export const Profile = () => {
                             alt="avatar"
                             className={styles.avatar}
                         />
-                        <Button label="Edit" className={styles.editBtn} />
+                        <Button label="Edit" icon={<MdEdit />} className={styles.editBtn} />
                         <h3 className={styles.name}>{name}</h3>
                         {user?.data ? (
                             <div className={styles.listContainer}>

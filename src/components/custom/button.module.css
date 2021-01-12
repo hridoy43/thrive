@@ -6,7 +6,9 @@
   font-weight: 700;
   color: #fff;
   background: var(--themeColor);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 999px;
   border: none;
   outline: none;
@@ -20,4 +22,9 @@
   margin-top: 8px;
   margin-bottom: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn .icon {
+  margin-top: 1px;
+  margin-right: 4px;
 }
