@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchRepo } from 'redux/actions';
 import { PageContainer, ContentContainer } from 'components/layout';
-import { RepoCard, ListHeader, Button, RepoListItem } from 'components/custom';
+import { RepoCard, ListHeader, Button, RepoListItem, LoadingPage } from 'components/custom';
 import styles from './repo.module.css';
 
 export const Repo = () => {
@@ -59,7 +59,7 @@ export const Repo = () => {
                         </div>
                     }
                 />
-                {renderRepoList(repo?.data || [])}
+                {repo?.status ? <LoadingPage /> : renderRepoList(repo?.data || [])}
             </ContentContainer>
         </PageContainer>
     );
