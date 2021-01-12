@@ -13,6 +13,6 @@ const client = axios.create({
 
 export const store = createStore(allReducers, composeWithDevTools(applyMiddleware(axiosMiddleware(client))));
 
-store.subscribe(() => {
-    console.log(store.getState());
-});
+// store.subscribe(() => {
+//     console.log(store.getState());
+// });

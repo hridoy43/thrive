@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchUser } from 'redux/actions';
+import { useHistory } from 'react-router-dom';
+import { fetchUser, signOut } from 'redux/actions';
 import { PageContainer, ContentContainer } from 'components/layout';
 import { Button } from 'components/custom';
 import styles from './profile.module.css';
 
 export const Profile = () => {
     const user = useSelector((state) => state.user);
+    const history = useHistory();
     const { avatar_url, name, type, location, blog } = user?.data || {};
 
     const dispatch = useDispatch();
@@ -14,6 +16,11 @@ export const Profile = () => {
     useEffect(() => {
         if (!user?.data) dispatch(fetchUser());
     }, [user?.data]);
+
+    function logOut() {
+        dispatch(signOut());
+        history.push('/login');
+    }
 
     return (
         <PageContainer header>
@@ -51,7 +58,7 @@ export const Profile = () => {
                     </div>
                 </div>
 
-                <Button label="Log Out" className={styles.logoutBtn} />
+                <Button label="Log Out" className={styles.logoutBtn} onClick={logOut} />
             </ContentContainer>
         </PageContainer>
     );
