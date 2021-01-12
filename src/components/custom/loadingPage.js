@@ -3,7 +3,7 @@ export function LoadingPage() {
         <div className="loading">
             <p>Loading...</p>
 
-            <style jsx>{`
+            <style jsx="true">{`
                 .loading {
                     width: 100vw;
                     height: 100%;

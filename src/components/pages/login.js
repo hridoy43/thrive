@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Input, Button } from 'components/custom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import loginPageLogo from 'assets/loginPageLogo.svg';
 import book from 'assets/book.svg';
-import { signIn, signOut } from 'redux/actions';
+import { signIn } from 'redux/actions';
 import styles from './login.module.css';
 
 export const Login = () => {
-    const isLogged = useSelector((state) => state.isLogged);
     const dispatch = useDispatch();
     const history = useHistory();
     const [id, setId] = useState(null);
