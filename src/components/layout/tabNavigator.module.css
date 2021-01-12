@@ -1,0 +1,33 @@
+.navigatorContainer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: stretch;
+  background: #fff;
+}
+
+.navigatorContainer .navBtn {
+  height: 48px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: #dde9ff;
+  border-radius: 15px 15px 0px 0px;
+  border-top: 5px solid #00299f;
+}
+
+.navigatorContainer .navBtn .icon {
+  color: #00299f;
+  margin-bottom: -1px;
+}
+
+.navigatorContainer .navBtn .label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 14px;
+  color: #00299f;
+}

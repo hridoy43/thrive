@@ -1,0 +1,86 @@
+.cardHeader {
+  padding: 0 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardHeader .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+.cardHeader .timeLeftWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.cardHeader .timeLeftWrapper .timeLeftLabel {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.cardHeader .timeLeftWrapper .time {
+  font-family: Orbitron;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  color: #ffd88b;
+}
+
+.cardBody {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e9fff9;
+  border-radius: 0 0 10px 10px;
+}
+
+.cardBody .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #0652dd;
+}
+
+.cardBody .timeWrapper {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #22b573;
+}
+
+.cardBody .timeWrapper .time {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.cardBody .timeWrapper .date {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.cardBody .btn {
+  width: 159px;
+  height: 36px;
+  background: #7858bb;
+  font-weight: 500;
+  font-size: 15px;
+  border-top: 4px solid #ffbe3d;
+}

@@ -1,10 +1,11 @@
-import AppHeader from './appHeader';
+import { AppHeader, TabNavigator } from 'components/layout';
 
-export default function PageContainer({ header, children }) {
+export function PageContainer({ header, children }) {
     return (
-        <div style={{ minHeight: '100%' }}>
+        <div style={{ minHeight: '100%', marginBottom: 54 }}>
             {header ? <AppHeader /> : null}
             <div style={{ padding: '15px' }}>{children}</div>
+            <TabNavigator />
         </div>
     );
 }

@@ -17,6 +17,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .btn:active {
-  margin-top: 7px;
+  margin-top: 8px;
+  margin-bottom: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -1,4 +1,4 @@
-import PageContainer from 'components/layout/pageContainer';
+import { PageContainer } from 'components/layout';
 
 export const Home = () => (
     <PageContainer header>
