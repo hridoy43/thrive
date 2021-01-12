@@ -12,8 +12,8 @@ export const Profile = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchUser());
-    }, []);
+        if (!user?.data) dispatch(fetchUser());
+    }, [user?.data]);
 
     return (
         <PageContainer header>

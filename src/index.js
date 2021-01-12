@@ -1,28 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-import { createStore, applyMiddleware } from 'redux';
-import allReducers from 'redux/reducers';
 import { Provider } from 'react-redux';
-import axios from 'axios';
-import axiosMiddleware from 'redux-axios-middleware';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { BASE_URL } from 'config';
+import { store } from 'redux/store';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-
-const client = axios.create({
-    // all axios can be used, shown in axios documentation
-    baseURL: BASE_URL,
-    responseType: 'json',
-});
-
-const store = createStore(allReducers, composeWithDevTools(applyMiddleware(axiosMiddleware(client))));
-
-store.subscribe(() => {
-    console.log(store.getState());
-});
 
 ReactDOM.render(
     <React.StrictMode>

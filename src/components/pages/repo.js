@@ -37,19 +37,21 @@ export const Repo = () => {
                 <RepoCard
                     headerContent={
                         <div className={styles.cardHeader}>
-                            <p className={styles.title}>hello</p>
+                            <p className={styles.title}>Repos</p>
                             <div className={styles.timeLeftWrapper}>
-                                <span className={styles.timeLeftLabel}>Time Left:</span>
-                                <span className={styles.time}> 2:30:41</span>
+                                <span className={styles.timeLeftLabel}>Total Repo:</span>
+                                <span className={styles.time}> {repo?.data?.length || 0}</span>
                             </div>
                         </div>
                     }
                     cardBody={
                         <div className={styles.cardBody}>
-                            <h4 className={styles.title}>Physics Solve Class</h4>
+                            <h4 className={styles.title}>Github.com</h4>
                             <div className={styles.timeWrapper}>
-                                <span className={styles.time}>2:00 PM</span>
-                                <span className={styles.date}>19 Apr 2020 (Sunday)</span>
+                                <span className={styles.time}>
+                                    {new Date().toLocaleString('en-US', { hour: 'numeric', hour12: true })}
+                                </span>
+                                <span className={styles.date}>{new Date().toDateString()}</span>
                             </div>
                             <Button label="Join Now!" className={styles.btn} />
                         </div>

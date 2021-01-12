@@ -23,7 +23,6 @@ export const Breadcrumb = () => {
     };
 
     const renderPathString = (pathArrList) => {
-        console.log('Log ~ file: breadcrumb.js ~ line 25 ~ renderPathString ~ pathArrList', pathArrList);
         if (Array.isArray(pathArrList))
             return pathArrList.map((item, i) => (
                 <span key={i}>
