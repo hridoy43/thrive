@@ -1,7 +1,9 @@
-import { PageContainer } from 'components/layout';
+import { PageContainer, ContentContainer } from 'components/layout';
 
 export const Home = () => (
     <PageContainer header>
-        <p>Hello!</p>
+        <ContentContainer>
+            <p>Welcome To Thrive Home!</p>
+        </ContentContainer>
     </PageContainer>
 );

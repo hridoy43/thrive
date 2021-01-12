@@ -6,17 +6,31 @@
   justify-content: stretch;
   background: #fff;
 }
-
+.navigatorContainer > a {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  text-decoration: none;
+}
 .navigatorContainer .navBtn {
   height: 48px;
   display: flex;
-  flex-grow: 1;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   background: #dde9ff;
   border-radius: 15px 15px 0px 0px;
   border-top: 5px solid #00299f;
+}
+.navBtn1 {
+  border-radius: 0px 15px 0px 0px !important;
+}
+.navBtn2 {
+  border-radius: 15px 15px 0px 0px !important;
+}
+.navBtn3 {
+  border-radius: 15px 0px 0px 0px !important;
 }
 
 .navigatorContainer .navBtn .icon {
@@ -30,4 +44,16 @@
   font-size: 10px;
   line-height: 14px;
   color: #00299f;
+}
+
+.navigatorContainer .activeNav {
+  height: 54px;
+  background: var(--themeColor);
+  transition: height 0.2s ease-in;
+}
+.navigatorContainer .activeNav .icon {
+  color: #fff !important;
+}
+.navigatorContainer .activeNav .label {
+  color: #fff;
 }
