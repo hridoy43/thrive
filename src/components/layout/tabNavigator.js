@@ -1,7 +1,7 @@
-import { FaCalendarAlt } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import { BiGitRepoForked } from 'react-icons/bi';
-import { Link, useRouteMatch, useLocation, useHistory } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import styles from './tabNavigator.module.css';
 
 export const TabNavigator = () => {
@@ -12,7 +12,7 @@ export const TabNavigator = () => {
             <Link to="/profile">
                 <div className={`${styles.navBtn} ${styles.navBtn1} ${matchPath('/profile') ? styles.activeNav : ''}`}>
                     <span className={styles.icon}>
-                        <FaCalendarAlt />
+                        <FaUserCircle />
                     </span>
                     <span className={styles.label}>Profile</span>
                 </div>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Home, Login, Profile, Repo } from 'components/pages';
-import { signIn, signOut } from 'store/actions';
+import { signIn, signOut } from 'redux/actions';
 
 import 'styles/global.css';
 import 'styles/var.css';
