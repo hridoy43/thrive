@@ -24,7 +24,8 @@
   width: 100%;
   min-height: 62px;
   height: 100%;
-  border: 2px solid #2f78ff;
+  border: 1px solid #2f78ff;
+  background: #2f78ff;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -37,6 +38,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
+  border: 1px solid #2f78ff;
+  border-radius: 5px;
 }
 
 .listItemWrapper .listItem .contentWrapper .content {
@@ -85,6 +89,7 @@
   color: white;
   background: #2f78ff;
   border-radius: 0 0 4px 0;
+  border: 1px solid #2f78ff;
 }
 /* .listItemWrapper .listItem .logoWrapper .icon {
   margin: 8px;
